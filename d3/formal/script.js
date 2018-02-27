@@ -1,7 +1,7 @@
-var w = 500,
-    h = 500;
+var w = 400,
+    h = 400;
 
-var colorscale = d3.scale.category10();
+var colorscale = d3.scale.category20();
 
 //Legend titles
 var LegendOptions = ['Yes','No'];
@@ -9,19 +9,17 @@ var LegendOptions = ['Yes','No'];
 //Data
 var d = [
           [
-            {axis:"comfort with coworkers",value:0.383459},
-            {axis:"comfort with supervisors",value:0.571429},
-            {axis:"percieved impact on reputation",value:0.330827+0.082707},
-            {axis:"observed/experienced behavior",value:0.410853+0.108384+0.179959},
-            {axis:"percieved negative consequences",value:0.556391},
-            {axis:"concern vs. physical health",value:0.548872},
+            {axis:"Coworker Comfort",value:0.383459},
+            {axis:"Superviser Comfort",value:0.571429},
+            {axis:"Seriousness",value:0.548872},
+            {axis:"Consequences",value: 0.556391},
+            {axis:"Response",value:0.410853},
           ],[
-            {axis:"comfort with coworkers",value:0.190945},
-            {axis:"comfort with supervisors",value:0.320866},
-            {axis:"percieved impact on reputation",value:0.220472+0.027559},
-            {axis:"observed/experienced behavior",value:0.453988+0.131783+0.186047},
-            {axis:"percieved negative consequences",value:0.311024},
-            {axis:"concern vs. physical health",value:0.202756},
+            {axis:"Coworker Comfort",value:0.190945},
+            {axis:"Superviser Comfort",value:0.320866},
+            {axis:"Seriousness",value:0.202756},
+            {axis:"Consequences",value:0.311024},
+            {axis:"Response",value:0.453988},
           ]
         ];
 
@@ -56,7 +54,7 @@ var text = svg.append("text")
     .attr("y", 10)
     .attr("font-size", "12px")
     .attr("fill", "#404040")
-    .text("Formal discussion in workplace?");
+    .text("Mental health formally discussed?");
         
 //Initiate Legend   
 var legend = svg.append("g")
